@@ -1,4 +1,3 @@
-
 // jest.config.js
 const nextJest = require('next/jest')
 
@@ -17,6 +16,7 @@ const customJestConfig = {
     '^@/app/ui/(.*)$': '<rootDir>/app/ui/$1',
     '^@/app/lib/(.*)$': '<rootDir>/app/lib/$1',
   },
+  testMatch: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'], // Add this line
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
